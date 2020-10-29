@@ -2,6 +2,7 @@
 // на вход: длина массива и данные о массивах в файле data.txt
 // выход: количество отрицательных чисел
 #include <iostream>
+#include<cstdio>
 #include <fstream>
 #include <stdio.h>
 #include <string>
@@ -32,7 +33,7 @@ int main()
 	counting((lenght - 1), array_2);
 
 	try {
-		freopen("data.txt", "r", stdin); // это как ifstream но круче
+		freopen("data.txt", "r", stdin); // это как ifstream но круче, работает как с консолью
 		int n;
 		while (std::cin >> n) {
 			if (std::cin.fail()) {
