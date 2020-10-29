@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string>
 #include <stdexcept>
-#pragma warning(disable : 4996)
+#pragma warning(disable : 4996) // чтобы freopen не ругался
 
 int counting(const int N, int* array);
 void init_array(int len, int* array);
@@ -25,7 +25,7 @@ int main()
 
 	srand(76); // генерация случайных чисел 76 - cид генерации
 	int lenght = input_int("длину генерируемого массива: ");;
-	
+
 	int* array_2 = new int[lenght]; // динамический массив
 	init_array(lenght, array_2);
 	printArray(lenght, array_2);
@@ -48,9 +48,9 @@ int main()
 			counting(n, arr);
 			delete[]arr;
 		}
-		
+
 	}
-	catch(...){
+	catch (...) {
 		std::cerr << "\n Ошибка при чтении файла, данные некорректны! \n";
 		return 666;
 	}
