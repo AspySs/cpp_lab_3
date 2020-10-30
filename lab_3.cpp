@@ -80,11 +80,9 @@ int counting(const int len, int* array) {
 
 	}
 
-	int num = 0;
 	for (int i = (len - 1); i > place; i--) { // поиск отрицательных чисел
 		if (array[i] < 0) {
 			count++;
-			num = array[i];
 		}
 	}
 	if (count > 0) {
