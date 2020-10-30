@@ -34,19 +34,19 @@ int main()
 
 	try {
 		freopen("data.txt", "r", stdin); // это как ifstream но круче, работает как с консолью
-		int n;
-		while (std::cin >> n) {
+		int arr_len;
+		while (std::cin >> arr_len) {
 			if (std::cin.fail()) {
 				throw 666;
 			}
-			int* arr = new int[n];
-			for (int i = 0; i < n; i++) {
+			int* arr = new int[arr_len];
+			for (int i = 0; i < arr_len; i++) {
 				if (!(std::cin >> arr[i])) {
 					throw 666;
 				}
 			}
-			printArray(n, arr);
-			counting(n, arr);
+			printArray(arr_len, arr);
+			counting(arr_len, arr);
 			delete[]arr;
 		}
 
