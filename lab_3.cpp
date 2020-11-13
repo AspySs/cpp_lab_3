@@ -37,12 +37,12 @@ int main()
 		int arr_len;
 		while (std::cin >> arr_len) {
 			if (std::cin.fail()) {
-				throw 666;
+				throw "Ошибка при чтении файла";
 			}
 			int* arr = new int[arr_len];
 			for (int i = 0; i < arr_len; i++) {
 				if (!(std::cin >> arr[i])) {
-					throw 666;
+					throw "Ошибка при чтении файла";
 				}
 			}
 			printArray(arr_len, arr);
@@ -53,7 +53,7 @@ int main()
 	}
 	catch (...) {
 		std::cerr << "\n Ошибка при чтении файла, данные некорректны! \n";
-		return 666;
+		return 6;
 	}
 
 
